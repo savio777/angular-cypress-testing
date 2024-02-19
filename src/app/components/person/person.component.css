@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 4px;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+}
+
+.calculate-button {
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  padding: 8px;
+}
+
+.age {
+  color: darkslateblue;
+  font-size: 24px;
+}

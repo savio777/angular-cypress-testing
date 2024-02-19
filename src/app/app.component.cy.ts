@@ -13,6 +13,8 @@ describe('app first test', () => {
   it('button action', () => {
     cy.mount(AppComponent);
 
+    cy.get('#buttonTest').get('button').should('contain.text', 'click test');
+
     cy.get('#buttonTest').get('button').first().click();
 
     cy.get('#buttonTestDisabled')
