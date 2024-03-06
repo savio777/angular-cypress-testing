@@ -2,7 +2,9 @@
   <input id="input1" type="number" (change)="setValueInput1($event)" />
   <input id="input2" type="number" (change)="setValueInput2($event)" />
 
+  @if (input1 && input2) {
   <p id="total">{{ input1 + input2 }}</p>
+  }
 
   <input type="text" id="total-response" />
 </div>

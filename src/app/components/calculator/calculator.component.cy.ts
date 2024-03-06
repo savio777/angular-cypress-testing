@@ -5,12 +5,23 @@ describe('CalculatorComponent tests', () => {
     cy.mount(CalculatorComponent);
 
     cy.get('.container').within(() => {
+      cy.get('#total')
+        .if()
+        .then(() => cy.get('#total'))
+        .should('have.text', '34');
+
       cy.get('#input1').type('7');
+
+      cy.wait(1000);
+
       cy.get('#input2').type('27');
 
       cy.get('#input2').blur();
 
-      cy.get('#total').should('have.text', '34');
+      cy.get('#total')
+        .if()
+        .then(() => cy.get('#total'))
+        .should('have.text', '34');
 
       cy.window().focus();
 
